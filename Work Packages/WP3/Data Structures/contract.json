@@ -1,0 +1,46 @@
+{
+  "$schema": "#",
+  "$id": "http://fluidos.eu/contract.schema.json",
+  "title": "Contract",
+  "type": "object",
+  "properties": {
+    "ID": {
+      "type": "string"
+    },
+    "ConsumerID": {
+      "type": "string"
+    },
+    "providerID": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive"
+      ]
+    },
+    "flavour": {
+      "type": "object",
+      "items": {
+        "$ref": "flavour.json"
+      }
+    }
+  },
+  "required": [
+    "ID",
+    "ConsumerID",
+    "ProviderID",
+    "startDate",
+    "status",
+    "flavour"
+  ]
+}

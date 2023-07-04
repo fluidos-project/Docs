@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://fluidos.eu/flavour.schema.json",
+  "title": "Flavour",
+  "type": "object",
+  "properties": {
+    "flavourID": {
+      "type": "string"
+    },
+    "providerID": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "characteristics": {
+      "type": "object",
+      "oneOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "fluidos-k8s"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/definitions/fluidos-resources"
+          },
+          "else": false
+        }
+      ]
+    },
+    "policy": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "http://rear.com/partitionable.schema.json"
+          }
+        ]
+      }
+    },
+    "owner": {
+      "type": "object",
+      "properties": {
+        "ID": {
+          "type": "string"
+        },
+        "IP": {
+          "type": "string"
+        },
+        "domainName": {
+          "type": "string"
+        }
+      }
+    },
+    "price": {
+      "$ref": "http://rear.com/price.schema.json"
+    },
+    "expirationTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "optionalFields": {
+      "type": "object",
+      "properties": {
+        "availability": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "fluidos-resources": {
+      "type": "object",
+      "properties": {
+        "cpu": {
+          "type": "string"
+        },
+        "memory": {
+          "type": "string"
+        },
+        "ephemeral-storage": {
+          "type": "string"
+        },
+        "gpu": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "cpu",
+        "memory"
+      ]
+    }
+  },
+  "required": [
+    "flavourID",
+    "providerID",
+    "type",
+    "characteristics",
+    "policy",
+    "owner",
+    "availability",
+    "price",
+    "expirationTime"
+  ]
+}

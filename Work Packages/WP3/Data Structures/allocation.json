@@ -1,0 +1,35 @@
+{
+  "$schema": "#",
+  "$id": "http://fluidos.eu/allocation.schema.json",
+  "title": "Allocation",
+  "type": "object",
+  "properties": {
+    "LocalNode": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Node",
+        "VirtualNode"
+      ]
+    },
+    "forwarding": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive"
+      ]
+    }
+  },
+  "required": [
+    "LocalNode",
+    "type",
+    "forwarding",
+    "status",
+    "flavour"
+  ]
+}
