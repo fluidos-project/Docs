@@ -3,6 +3,8 @@
 
 # Introduction
 
+Lorem ipsum dolor sit amet
+
 # Activities
 
 1. [Main Functional elements](#main-functional-elements)
