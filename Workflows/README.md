@@ -61,9 +61,9 @@ Lorem ipsum dolor sit amet
 7. The **Discovery Manager** of the Node sends a _LIST_FLAVOURS_ message to its Supernode, already known and directly reachable.
 8. The **Discovery Manager** of the Supernode looks-up for suitable local _flavours_ matching the received _flavour selector_ in its **Available Resources** table.
 9. In case no suitable _flavours_ are found, the **Discovery Manager** looks up in the **Peering Candidates** table for potential peering candidates (suitable _flavours_) matching the _request_.
-10. 
-11. 
-12. 
+10. In case no suitable peering candidates are found, the **Discovery Manager** of the Consumer Supernode sends a _LIST_FLAVOURS_ message to all the endpoints it already knows, whatever they are other Supernodes or a Catalog, attaching the _flavour selector_.
+11. The **Discovery Manager** of the Provider Supernode looks-up for suitable local _flavours_ matching the received _flavour selector_ in its **Available Resources** table.
+12. See <u>step #9</u>.
 13. In case one or more suitable _flavours_ are found, the **Discovery Manger** of the Provider Supernode sends back an OK message to the **Discovery Manager** of the Consumer Supernode attaching the _flavours_ list.
 14. The **Discovery Manager** of the Consumer Supernode populates the **Peering Candidates** table with the newly discovered _flavours_.
 15. The **Discovery Manager** of the Consumer Supernode sends back an OK message to the **Discovery Manager** of the Consumer Node attaching the _flavours_ list.
@@ -81,9 +81,9 @@ Lorem ipsum dolor sit amet
 
 Following the steps defined into the REAR Protocol, the couples of **Contract Managers** may exchange a couple of other messages to confirm the reservation on both sides, but may also directly agree following the procedure described from <u>step X</u> to <u>step Y</u>.
 
-27. The **Contract Manager** of the Provider Supernode creates a new _contract_ and answers back to the **Contract Manager** of the Consumer Supernode with an _OK_ message. At the same time an informer makes the **[Network Manager](../Work%20Packages/WP3/Network-manager.md)** aware, so that it can deploy a virtual router to enable peering reachability.
-28. The **Contract Manager** of the Consumer Supernode creates a new _contract_ and answers back to the **Contract Manager** of the Consumer Node with an _OK_ message. At the same time an informer makes the **[Network Manager](../Work%20Packages/WP3/Network-manager.md)** aware, so that it can deploy a virtual router to enable peering reachability.
-29. The **Contract Manager** of the Consumer Node creates a new _contract_ and informs its REAR Manager that the resources have been reserved. At the same time an informer makes the **[Network Manager](../Work%20Packages/WP3/Network-manager.md)** aware, so that it can deploy a virtual router to enable peering reachability.
+27. The **Contract Manager** of the Provider Supernode creates a new _contract_ and answers back to the **Contract Manager** of the Consumer Supernode with an _OK_ message. At the same time an informer makes the **Network Manager** aware, so that it can deploy a virtual router to enable peering reachability.
+28. The **Contract Manager** of the Consumer Supernode creates a new _contract_ and answers back to the **Contract Manager** of the Consumer Node with an _OK_ message. At the same time an informer makes the **Network Manager** aware, so that it can deploy a virtual router to enable peering reachability.
+29. The **Contract Manager** of the Consumer Node creates a new _contract_ and informs its REAR Manager that the resources have been reserved. At the same time an informer makes the **Network Manager** aware, so that it can deploy a virtual router to enable peering reachability.
 30. The **REAR Manager** updates the **Available Resources** table by creating a new _allocation_ of type "VirtualNode" in "inactive" status.
 31. The **REAR Manager** solicitates its **[Virtual Fabric Manager](../Work%20Packages/WP3/Virtual-fabric-manager.md)** (LIQO) to set-up the peering.
 32. The **Virtual Fabric Manager** of the Consumer Node generates a ResourceRequest on the **Virtual Fabric Manager** of the Provider Node. Network reachability is provided by the **Network Managers**.
