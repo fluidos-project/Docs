@@ -64,7 +64,7 @@ A Node is a set of software components that live on a Kubernete cluster, whateve
 
 A Supernode acts as a *gateway* for domain's nodes that do not have access to the Internet or they don't know other domains. Its behavior is mostly similar to the node's one, with the main difference being the knowledge of other domains or catalogs with wich it can interact. The interactions exploit the same protocols and are managed by the same components, but the sources and destinations of the informations differ.
 
-Besides acting as a gateway, a Supernode is another aggregation point in the distribution chain of informations. The specific tasks are deepened in the descriptive document of each component, while the interactions are shown in the [workflows](#workflows) involving multiple domains.
+Besides acting as a gateway, a Supernode is another aggregation point in the distribution chain of informations. The specific tasks are deepened in the descriptive document of each component, while the interactions are shown in the workflows involving multiple domains.
 
 
 #### Software components
@@ -84,8 +84,7 @@ The Node/Supernode components are the following:
 - [Discovery Manager](/Work%20Packages/WP3/Discovery-manager.md)
 - [Peering Candidates](/Work%20Packages/WP3/Peering-candidates.md)
 - [Contract Manager](/Work%20Packages/WP3/Contract-manager.md)
-- [Resource Importer](/Work%20Packages/WP3/Resource-importer.md)
-- [Resource Exporter](/Work%20Packages/WP3/Resource-exporter.md)
+- [Network Manager](/Work%20Packages/WP3/Network-manager.md)
 - [Virtual Fabric Manager](/Work%20Packages/WP3/Virtual-fabric-manager.md)
 - [Privacy and Security Manager](/Work%20Packages/WP5/Privacy-and-security-manager.md)
 - [Trust and Security Agent](/Work%20Packages/WP5/Trust-and-security-agent.md)
@@ -164,7 +163,7 @@ This phase involves many components, since it consists in the contract signing s
 
 #### 4. Peering
 
-The Peering phase is carried out by the [Resource Importer](/Work%20Packages/WP3/Resource-importer.md) of the Consumer Node, the [Resource Exporter](/Work%20Packages/WP3/Resource-exporter.md) of the Provider Node and the [Virtual Fabric Managers](/Work%20Packages/WP3/Virtual-fabric-manager.md) of both Nodes: it basically relies on the primitives provided by LIQO to establish the peering between the two nodes and extend the continuum.
+The Peering phase is carried out by the [Virtual Fabric Managers](/Work%20Packages/WP3/Virtual-fabric-manager.md) of both Nodes: it basically relies on the primitives provided by LIQO to establish the peering between the two nodes and extend the continuum, exploiting virtual routers created by the [Network Managers](/Work%20Packages/WP3/Network-manager.md) to ensure node-to-node reachability.
 
 #### 5. Usage
 
