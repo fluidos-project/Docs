@@ -50,12 +50,9 @@ FLUIDOS architecture is made up of two main objects, very different from each ot
 
   Different type of workflow can be identified according to the presence of specific components in the scenario and the location of the involved nodes. The following workflows are described:
 
-  1. Same domain scenario:
-      1. [Two nodes](./docs/workflows/same_domains/two_nodes.md)
-      1. [A node and the supernode](./docs/workflows/same_domains/node_supernode.md)
-  2. Different domains scenario:
-      1. [Two nodes](./docs/workflows/different_domains/two_nodes.md)
-      2. [Two nodes with catalog](./docs/workflows/different_domains/two_nodes_catalog.md)
+  1. [Two nodes in the same domain](./docs/workflows/same_domains/two_nodes.md)
+  2. [Two nodes in different domains (without catalog)](./docs/workflows/different_domains/two_nodes.md)
+  3. [Two nodes in different domains with catalog](./docs/workflows/different_domains/two_nodes_catalog.md)
 
 # Main Activities
 
