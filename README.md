@@ -52,7 +52,7 @@ FLUIDOS architecture is made up of two main objects, very different from each ot
 
   1. [Two nodes in the same domain](./docs/workflows/same_domains/two_nodes.md)
   2. [Two nodes in different domains (without catalog)](./docs/workflows/different_domains/two_nodes.md)
-  3. [Two nodes in different domains with catalog](./docs/workflows/different_domains/two_nodes_catalog.md)
+  3. [Two nodes in different domains (with catalog)](./docs/workflows/different_domains/two_nodes_catalog.md)
 
 # Main Activities
 
