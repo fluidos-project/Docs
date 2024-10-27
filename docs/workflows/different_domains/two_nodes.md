@@ -1,5 +1,9 @@
 # Two nodes in different domains (w/o Catalog)
 
+The complete workflow showing the interaction between two nodes belonging to different domains is the following.
+
+NOTE: currently there are ongoing discussions whether the 'supernode' concept can be simplified and the workflow among nodes belonging to different domains can be seamlessly integrated in the one already defined for the nodes belonging to one single domain. 
+
 ![Workflow 2](../../images/workflows/workflow_3.png)
 
 ## Steps

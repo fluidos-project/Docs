@@ -1,8 +1,6 @@
 # Two nodes, same domain
 
-The complete workflow, step by step of the interaction between two nodes in the same domain can be found [here](./steps/01_resource_detection.md).
-
-## Index
+The complete workflow showing the interaction between two nodes belonging to the same domain is the following.
 
 1. [Resource Discovery and Creation](./steps/01_resource_detection.md)
 2. [Intent Creation](./steps/02_intent_creation.md)
